@@ -11,7 +11,7 @@ namespace MiniProject
 {
     public partial class Form1 : Form
     {
-        //tesssst
+        //tesssst2
         static Form1 _obj;
         private Button currentBtn;
         private Panel leftBorderBtn;
