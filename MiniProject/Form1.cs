@@ -11,10 +11,8 @@ namespace MiniProject
 {
     public partial class Form1 : Form
     {
-        //tesssst
         
         static Form1 _obj;
-        static Form1 _objj;
         private Button currentBtn;
         private Panel leftBorderBtn;
         public static Form1 Instance
