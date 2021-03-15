@@ -11,7 +11,7 @@ namespace MiniProject
 {
     public partial class Cycle : UserControl
     {
-
+        BindingSource bs=new BindingSource();
         public Cycle()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace MiniProject
 
         private void Cycle_Load(object sender, EventArgs e)
         {
-
+            Db.RemplissageListeBox("select * from cycle", "cycle", "nom", "code_cycle", ref bs,lstBoxCycle);
         }
     }
 }
