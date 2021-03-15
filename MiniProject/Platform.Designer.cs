@@ -33,13 +33,12 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnEcoles = new System.Windows.Forms.Button();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.cyclee1 = new MiniProject.Cyclee();
             this.panel2 = new System.Windows.Forms.Panel();
             this.classes1 = new MiniProject.Classes();
             this.niveau1 = new MiniProject.Niveau();
             this.branches1 = new MiniProject.Branches();
-            this.cycle1 = new MiniProject.Cycle();
             this.panel1.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +50,6 @@
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnEcoles);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -62,6 +60,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -70,7 +69,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button4.Location = new System.Drawing.Point(348, 0);
+            this.button4.Location = new System.Drawing.Point(231, 0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(77, 47);
             this.button4.TabIndex = 4;
@@ -82,6 +81,7 @@
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -90,7 +90,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button5.Location = new System.Drawing.Point(265, 0);
+            this.button5.Location = new System.Drawing.Point(154, 0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(77, 47);
             this.button5.TabIndex = 3;
@@ -102,6 +102,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -110,7 +111,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button2.Location = new System.Drawing.Point(182, 0);
+            this.button2.Location = new System.Drawing.Point(77, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(77, 47);
             this.button2.TabIndex = 2;
@@ -122,6 +123,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -130,7 +132,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button1.Location = new System.Drawing.Point(99, 0);
+            this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 47);
             this.button1.TabIndex = 1;
@@ -138,40 +140,28 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // btnEcoles
-            // 
-            this.btnEcoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnEcoles.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEcoles.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEcoles.FlatAppearance.BorderSize = 0;
-            this.btnEcoles.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnEcoles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEcoles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnEcoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEcoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEcoles.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnEcoles.Location = new System.Drawing.Point(16, 0);
-            this.btnEcoles.Name = "btnEcoles";
-            this.btnEcoles.Size = new System.Drawing.Size(77, 47);
-            this.btnEcoles.TabIndex = 0;
-            this.btnEcoles.Text = "Ecoles";
-            this.btnEcoles.UseVisualStyleBackColor = false;
-            this.btnEcoles.Click += new System.EventHandler(this.btnEcoles_Click);
-            // 
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.pnlBody.Controls.Add(this.cyclee1);
             this.pnlBody.Controls.Add(this.panel2);
             this.pnlBody.Controls.Add(this.classes1);
             this.pnlBody.Controls.Add(this.niveau1);
             this.pnlBody.Controls.Add(this.branches1);
-            this.pnlBody.Controls.Add(this.cycle1);
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBody.Location = new System.Drawing.Point(0, 47);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(820, 408);
             this.pnlBody.TabIndex = 1;
             this.pnlBody.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBody_Paint);
+            // 
+            // cyclee1
+            // 
+            this.cyclee1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cyclee1.Location = new System.Drawing.Point(0, 1);
+            this.cyclee1.Name = "cyclee1";
+            this.cyclee1.Size = new System.Drawing.Size(820, 407);
+            this.cyclee1.TabIndex = 5;
             // 
             // panel2
             // 
@@ -206,16 +196,6 @@
             this.branches1.Size = new System.Drawing.Size(820, 408);
             this.branches1.TabIndex = 1;
             // 
-            // cycle1
-            // 
-            this.cycle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cycle1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cycle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cycle1.Location = new System.Drawing.Point(0, 0);
-            this.cycle1.Name = "cycle1";
-            this.cycle1.Size = new System.Drawing.Size(820, 408);
-            this.cycle1.TabIndex = 0;
-            // 
             // Platform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,7 +214,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnEcoles;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
@@ -245,5 +224,6 @@
         private Niveau niveau1;
         private Branches branches1;
         private System.Windows.Forms.Panel panel2;
+        private Cyclee cyclee1;
     }
 }

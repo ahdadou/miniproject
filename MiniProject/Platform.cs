@@ -81,8 +81,9 @@ namespace MiniProject
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            cycle1.BringToFront();
-            cycle1.Show();
+            cyclee1.BringToFront();
+            cyclee1.Show();
+
             branches1.Hide();
             niveau1.Hide();
             classes1.Hide();
@@ -95,7 +96,7 @@ namespace MiniProject
         {
             ActivateButton(sender);
             branches1.BringToFront();
-            cycle1.Hide();
+            cyclee1.Hide();
             branches1.Show();
             niveau1.Hide();
             classes1.Hide();
@@ -106,7 +107,7 @@ namespace MiniProject
         {
             ActivateButton(sender);
             niveau1.BringToFront();
-            cycle1.Hide();
+            cyclee1.Hide();
             branches1.Hide();
             niveau1.Show();
             classes1.Hide();
@@ -117,7 +118,7 @@ namespace MiniProject
         {
             ActivateButton(sender);
             classes1.BringToFront();
-            cycle1.Hide();
+            cyclee1.Hide();
             branches1.Hide();
             niveau1.Hide();
             classes1.Show();
@@ -136,7 +137,7 @@ namespace MiniProject
 
         private void Platform_Load(object sender, EventArgs e)
         {
-            cycle1.Hide();
+            cyclee1.Hide();
             branches1.Hide();
             niveau1.Hide();
             classes1.Hide();
