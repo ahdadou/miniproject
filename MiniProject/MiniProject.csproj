@@ -211,6 +211,8 @@
     <Content Include="Materiales_Iconos\res.png" />
     <Content Include="Materiales_Iconos\venta.png" />
     <Content Include="Materiales_Iconos\ventas.png" />
+    <None Include="Resources\icons8-print-25.png" />
+    <None Include="Resources\icons8-print-48.png" />
     <None Include="Resources\orward24.png" />
     <None Include="Resources\back241.png" />
     <None Include="Resources\back24.png" />

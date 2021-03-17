@@ -33,8 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvNiveau = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -46,10 +44,11 @@
             this.btnValide = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAjouter = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNiveau)).BeginInit();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dgvNiveau = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panel11.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNiveau)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -61,57 +60,6 @@
             this.label4.Size = new System.Drawing.Size(277, 40);
             this.label4.TabIndex = 15;
             this.label4.Text = "Gestion des niveau";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dgvNiveau);
-            this.panel1.Location = new System.Drawing.Point(124, 118);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(728, 272);
-            this.panel1.TabIndex = 16;
-            // 
-            // dgvNiveau
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvNiveau.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvNiveau.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvNiveau.BackgroundColor = System.Drawing.Color.White;
-            this.dgvNiveau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvNiveau.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvNiveau.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(76)))), ((int)(((byte)(121)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNiveau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvNiveau.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvNiveau.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvNiveau.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvNiveau.DoubleBuffered = true;
-            this.dgvNiveau.EnableHeadersVisualStyles = false;
-            this.dgvNiveau.GridColor = System.Drawing.Color.White;
-            this.dgvNiveau.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(76)))), ((int)(((byte)(121)))));
-            this.dgvNiveau.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvNiveau.Location = new System.Drawing.Point(0, 0);
-            this.dgvNiveau.Name = "dgvNiveau";
-            this.dgvNiveau.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvNiveau.RowHeadersVisible = false;
-            this.dgvNiveau.Size = new System.Drawing.Size(728, 272);
-            this.dgvNiveau.TabIndex = 0;
-            this.dgvNiveau.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNiveau_CellContentClick);
             // 
             // bunifuElipse1
             // 
@@ -250,6 +198,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnAjouter);
             this.panel2.Controls.Add(this.btnValide);
             this.panel2.Controls.Add(this.btnAnnuler);
@@ -257,7 +206,7 @@
             this.panel2.Controls.Add(this.btnsupprimer);
             this.panel2.Location = new System.Drawing.Point(124, 396);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(451, 51);
+            this.panel2.Size = new System.Drawing.Size(728, 51);
             this.panel2.TabIndex = 39;
             // 
             // btnAjouter
@@ -279,24 +228,81 @@
             this.btnAjouter.UseVisualStyleBackColor = false;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(76)))), ((int)(((byte)(121)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::MiniProject.Properties.Resources.icons8_print_25;
+            this.button2.Location = new System.Drawing.Point(585, 7);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(140, 41);
+            this.button2.TabIndex = 40;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // dgvNiveau
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvNiveau.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvNiveau.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvNiveau.BackgroundColor = System.Drawing.Color.White;
+            this.dgvNiveau.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvNiveau.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvNiveau.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(76)))), ((int)(((byte)(121)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNiveau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvNiveau.ColumnHeadersHeight = 50;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNiveau.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvNiveau.DoubleBuffered = true;
+            this.dgvNiveau.EnableHeadersVisualStyles = false;
+            this.dgvNiveau.GridColor = System.Drawing.Color.White;
+            this.dgvNiveau.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(76)))), ((int)(((byte)(121)))));
+            this.dgvNiveau.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvNiveau.Location = new System.Drawing.Point(124, 139);
+            this.dgvNiveau.Name = "dgvNiveau";
+            this.dgvNiveau.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvNiveau.RowHeadersVisible = false;
+            this.dgvNiveau.Size = new System.Drawing.Size(725, 251);
+            this.dgvNiveau.TabIndex = 0;
+            this.dgvNiveau.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNiveau_CellContentClick);
+            // 
             // Classes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Controls.Add(this.dgvNiveau);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel11);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Name = "Classes";
             this.Size = new System.Drawing.Size(1000, 475);
             this.Load += new System.EventHandler(this.Classes_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNiveau)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNiveau)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,8 +311,6 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvNiveau;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel11;
@@ -318,5 +322,7 @@
         private System.Windows.Forms.Button btnValide;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnAjouter;
+        private System.Windows.Forms.Button button2;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvNiveau;
     }
 }
