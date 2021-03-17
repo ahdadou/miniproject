@@ -35,7 +35,7 @@ namespace MiniProject
         }
 
         //fermer Connection
-        static private void fermerConnection()
+        static public void fermerConnection()
         {
             if (cn.State != ConnectionState.Closed)
             {
@@ -65,6 +65,7 @@ namespace MiniProject
             listBox.DataSource = bindingSource;
             listBox.DisplayMember = display;
             listBox.ValueMember = value;
+            fermerConnection();
         }
 
         //static public void RemplissageComboBox(string requet, string table, string display, string value, ref BindingSource bindingSource, ComboBox listBox)
@@ -117,9 +118,53 @@ namespace MiniProject
             listBox.DataSource = bindingSourceForeign;
             listBox.DisplayMember = display;
             listBox.ValueMember = value;
+
         }
 
 
+      static public void RemplirGrd(string req, string table, BindingSource bs,DataGridView grd,ref SqlDataAdapter dab)
+        {
+            openConnection();
+
+
+            cmd = new SqlCommand(req, cn);
+            dab = new SqlDataAdapter(cmd);
+
+            if (ds.Tables[table] != null)
+                ds.Tables[table].Clear();
+
+            dab = new SqlDataAdapter(cmd);
+            comBuild = new SqlCommandBuilder(dab);
+
+
+            dab.Fill(ds, table);
+            bs.DataSource = ds;
+            bs.DataMember = table;
+            grd.DataSource = bs;
+
+           // fermerConnection();
+
+        }
+
+        static public void RemplirGrd2(string req, string table, BindingSource bs, DataGridView grd, ref SqlDataAdapter dab)
+        {
+            openConnection();
+            SqlCommand cmd = new SqlCommand(req, cn);
+            // da = new SqlDataAdapter(cmd);
+            //if (ds.Tables[table] != null)
+            //    ds.Tables[table].Clear();
+            //dab = new SqlDataAdapter(cmd);
+            // comBuild = new SqlCommandBuilder(dab);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                grd.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString());
+            }
+
+            cn.Close();
+
+
+        }
 
 
         //genere ID

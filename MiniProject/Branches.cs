@@ -180,6 +180,8 @@ namespace MiniProject
                 if (MessageBox.Show("Voulez Vous Supprimer Ce Branche", "Attention", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     bsB.RemoveCurrent();
+                    this.daB.Update(Db.ds, "Branche");
+
                 }
             }
         }
